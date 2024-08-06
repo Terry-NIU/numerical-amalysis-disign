@@ -5,13 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>钮博文课程设计</title>
     <style>
+        .con1{
+            background: linear-gradient(to bottom, rgb(253, 148, 11), #ffffff);
+         
+            padding: 20px;
+            margin: 0 0px; /* 与 header 的内边距对齐 */
+            box-sizing: border-box; /* 包含内边距和边框在宽度内 */
+        }
+        .con2{
+            line-height:1.5em;
+            margin:0 20px;
+        }
+        header h1 {
+              font-size: 2em; /* 默认字体大小 */
+        }
+        .con2 h2{
+            font-size:2em;
+            text-align:center;
+            
+        }
+        .con2 p{
+            line-height:3em;
+        }
+
+        @media (max-width: 768px) {
+        header h1 {
+        font-size: 1.5em; /* 在小屏幕上缩小字体 */
+          }
+          .con2 h2{
+            font-size:1.5em;
+        }
+        }
         header{
             background-color:rgb(253, 148, 11);
             height: 80px; /* 设置高度 */
             line-height: 80px; /* 保证文字垂直居中 */
             position: relative; /* 让绝对定位的元素相对于 header */
             padding: 10px 50px; /* 内边距 */
-            
+            box-sizing: border-box;
         }
         header a{
             text-decoration:none ;
@@ -20,10 +51,17 @@
         header a:hover{
             text-decoration:underline ;
         }
-        h1{
+        header ul{
             position:absolute;
-            left:120px;
-            top:-10px;
+            right:6vw;
+            top:20px;
+            line-height:80px;
+
+        }
+       h1{
+            position:absolute;
+            left:85px;
+            top:-25px;
             line-height:80px;
             color:white;
 
@@ -32,13 +70,7 @@
             display:inline ;
             margin-right:4vw;
         }
-        header ul{
-            position:absolute;
-            right:5vw;
-            top:0;
-            line-height:80px;
-
-        }
+       
     </style>  
 </head>
 <body>
@@ -50,5 +82,19 @@
         <li><a href="#">作者介绍</a></li>
     </ul>
     </header>
+    <main>
+        <section class="con1"></section>
+        <section class="con2">
+            <h2>使用过程中的Q&A</h2>
+            <p>图表显示不正常?<br>
+                <img src="images/err.png"><br>
+                如果图表显示出现上图的异常，说明您的“结束计时时间”设置得太高啦！由于UI的显示高度受限，无法打印出完整图表。<br>
+                解决方案：强烈建议您将“结束计时时间”设置到和下图结果指标一致的数值，即可查看完整的上升过程指标变化图。Try it again!<br>
+                <img src="images/para.png"><br>
+                很抱歉由于建模仍不完善的问题，本求解器暂时无法正确显示火箭下坠过程参数，作者后期会努力继续优化的！😊
+            </p>
+        </section>
+
+    </main>
 </body>
 </html>
