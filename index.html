@@ -6,15 +6,15 @@
     <title>钮博文课程设计</title>
     <style>
         header h1 {
-           font-size: 2em; /* 默认字体大小 */
-     }
+              font-size: 2em; /* 默认字体大小 */
+        }
 
         @media (max-width: 768px) {
-         header h1 {
+        header h1 {
         font-size: 1.5em; /* 在小屏幕上缩小字体 */
-         }
-       }
-
+          }
+        }
+        
         header{
             background-color:rgb(253, 148, 11);
             height: 80px; /* 设置高度 */
@@ -51,21 +51,37 @@
         }
         .pic{
             padding: 0 50px; /* 左右边距与 header 一致 */
-            
+            display: flex;
+            flex-direction: column; /* 确保子元素垂直排列 */
+            align-items: flex-start; /* 子元素左对齐 */
             
             color:white;
-            height:105vh;
+            height:125vh;
             background-image: url('images/rc2.png');
             background-repeat: no-repeat;
            background-size: cover;
             background-position: center;
             display:flex;
-
-
-        }
-        .pic{
             font-size:30px;
+
+
         }
+        .pic h2 {
+           margin-bottom: -30px; /* 设置更小的下边距 */
+        }
+
+        .pic a{
+            
+            color:white;
+            text-decoration:none;
+            border:1px solid rgb(253, 148, 11);
+            padding: 5px 0px;
+            background-color: rgb(253, 148, 11) ;
+            margin-left: 5px;
+            border-radius: 5px;
+            font-size:20px;
+        }
+        
 
     </style>
 </head>
@@ -80,7 +96,10 @@
     </header>
     <main>
         <section class="pic">
-            <h2>计算火箭发射可行性</h2>
+            <h2>计算火箭发射可行性<br>
+                
+            </h2>
+            <p><a href="launching_caculator.exe" download>Try Now!</a></p>
 
         </section>
 
