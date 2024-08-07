@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>钮博文课程设计</title>
     <style>
+         
         .con1{
             background: linear-gradient(to bottom, rgb(253, 148, 11), #ffffff);
          
@@ -15,6 +16,23 @@
         .con2{
             line-height:1.5em;
             margin:0 20px;
+            border-bottom: 4px dashed rgb(253, 148, 11); /* 设置下划线样式 */
+            margin-bottom: 20px; /* 为了让下划线可见，增加间距 */
+        }
+        .con3{
+            line-height:1.5em;
+            margin:20px 20px;
+            border-bottom: 4px dashed rgb(253, 148, 11); /* 设置下划线样式 */
+            margin-bottom: 20px; /* 为了让下划线可见，增加间距 */
+        }
+        .con4{
+            line-height:1.5em;
+            margin:20px 20px;
+            border-bottom: 4px dashed rgb(253, 148, 11); /* 设置下划线样式 */
+            margin-bottom: 20px; /* 为了让下划线可见，增加间距 */
+        }
+        .con2 p{
+            line-height:3em;
         }
         header h1 {
               font-size: 2em; /* 默认字体大小 */
@@ -24,7 +42,10 @@
             text-align:center;
             
         }
-        .con2 p{
+        .con3 p{
+            line-height:3em;
+        }
+        .con4 p{
             line-height:3em;
         }
 
@@ -51,6 +72,15 @@
         header a:hover{
             text-decoration:underline ;
         }
+        .con4 a{
+            color:white;
+            text-decoration:none;
+            border:1px solid rgb(253, 148, 11);
+            padding: 5px 10px;
+            background-color: rgb(253, 148, 11) ;
+            margin-left: 20px;
+            border-radius: 5px;
+                }
         header ul{
             position:absolute;
             right:6vw;
@@ -91,10 +121,31 @@
                 如果图表显示出现上图的异常，说明您的“结束计时时间”设置得太高啦！由于UI的显示高度受限，无法打印出完整图表。<br>
                 解决方案：强烈建议您将“结束计时时间”设置到和下图结果指标一致的数值，即可查看完整的上升过程指标变化图。Try it again!<br>
                 <img src="images/para.png"><br>
-                很抱歉由于建模仍不完善的问题，本求解器暂时无法正确显示火箭下坠过程参数，作者后期会努力继续优化的！😊<br>
+                很抱歉由于时间原因，本求解器暂时无法正确显示火箭下坠过程参数，作者后期会努力继续优化的！😊<br>
+
                 <a href="launching_caculator.exe" download>Download Installer</a>
 
             </p>
+        </section>
+        <section class="con3">
+            <p>不知道输什么参数？<br>
+                初始界面已经按照题目条件，设定了一组参数，想要尝试更多，以下提供一些参考<br>
+                论文中给出的长征五号发射参数（单级）：<br>
+                <img src="images/cz5.png"><br>
+                现役大型运载火箭参数对比（来自维基百科）：<br>
+                <img src="images/international.png"><br>
+            </p>
+
+        </section>
+        <section class="con4">
+            <p>没有MATLAB？<br>
+                欢迎点击下方链接，在线体验作者搭建的课设专属WEBAPP！<br>
+                <a href="http://955805nxec41.vicp.fun">在线体验!</a><br>
+                将浏览器设置为电脑UI，即可在任何设备上实现访问！<br>
+                (网站使用内网穿透技术搭建，因没有合适的服务器，目前只在作者的PC端部署，出于安全因素考虑，大部分时间将处于关闭状态。如需体验，请联系作者开网）
+
+            </p>
+
         </section>
 
     </main>
