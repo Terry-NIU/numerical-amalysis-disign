@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钮博文课程设计</title>
+    <style>
+         
+        .con1{
+            background: linear-gradient(to bottom, rgb(253, 148, 11), #ffffff);
+         
+            padding: 20px;
+            margin: 0 0px; /* 与 header 的内边距对齐 */
+            box-sizing: border-box; /* 包含内边距和边框在宽度内 */
+        }
+        .con2{
+            line-height:1.5em;
+            margin:0 20px;
+            border-bottom: 4px dashed rgb(253, 148, 11); /* 设置下划线样式 */
+            margin-bottom: 20px; /* 为了让下划线可见，增加间距 */
+        }
+        .con2 p{
+            line-height:3em;
+        }
+        header h1 {
+              font-size: 2em; /* 默认字体大小 */
+        }
+        .con2 h2{
+            font-size:2em;
+            text-align:center;
+            
+        }
+        @media (max-width: 768px) {
+        header h1 {
+        font-size: 1.5em; /* 在小屏幕上缩小字体 */
+          }
+          .con2 h2{
+            font-size:1.5em;
+        }
+        }
+        header{
+            background-color:rgb(253, 148, 11);
+            height: 80px; /* 设置高度 */
+            line-height: 80px; /* 保证文字垂直居中 */
+            position: relative; /* 让绝对定位的元素相对于 header */
+            padding: 10px 50px; /* 内边距 */
+            box-sizing: border-box;
+        }
+        header a{
+            text-decoration:none ;
+            color:white;
+        }
+        header a:hover{
+            text-decoration:underline ;
+        }
+        header ul{
+            position:absolute;
+            right:6vw;
+            top:20px;
+            line-height:80px;
+
+        }
+       h1{
+            position:absolute;
+            left:85px;
+            top:-25px;
+            line-height:80px;
+            color:white;
+
+        }
+        header li{
+            display:inline ;
+            margin-right:4vw;
+        }
+        .play-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: #ff8c00; /* 背景颜色 */
+            border-radius: 50%; /* 圆形按钮 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: #ff6f00; /* 悬停时背景颜色变化 */
+            transform: scale(1.1); /* 悬停时放大效果 */
+        }
+
+        .play-button::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* 中心对齐三角形 */
+        }
+
+        .play-button a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px; /* 隐藏文本 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* 确保按钮在链接上方 */}
+       
+    </style>  
+</head>
+<body>
+    <header>
+    <h1>火箭上升高度计算器</h1>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="instruction.html">使用说明</a></li>
+        <li><a href="theory.html">火箭发射原理</a></li>
+        <li><a href="author.html">作者介绍</a></li>
+    </ul>
+    </header>
+    <main>
+        <section class="con1"></section>
+        <section class="con2">
+            <h2>火箭发射升空的背后原理</h2>
+            <p>根据近地轨道的相关理论知识与计算，我们将入轨的判定依据粗略设置为：最大高度超过160km,最大速度超过7730m/s。（摘自课设论文）<br>
+                
+                您可能会发现，无论怎样设置初始参数，只要使用单级火箭模型发射，火箭的飞行指标都难以达到该数值<br>
+                那么，在实际的航天工程中，火箭发射的原理是什么样的呢？<br>
+                
+                我们借助一个有趣的B站的视频了解一下！（本来想写一篇short essay的，实在没时间了😭）<br>
+                <a href=" https://b23.tv/biYxEOu" class="play-button">
+                    
+                </a>
+              </div> 
+
+            </p>
+        </section>
+        
+
+    </main>
+</body>
+</html>
